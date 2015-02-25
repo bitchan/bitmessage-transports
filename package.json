@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "description": "bitmessage transports",
   "main": "./lib/index.js",
+  "browser": {
+    "./lib/tcp.js": "./lib/tcp.browser.js",
+    "./lib/ws.js": "./lib/ws.browser.js"
+  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha tests/index.js && xvfb-run -a karma start --browsers Chromium && xvfb-run -a karma start --browsers Firefox && jshint .",
+    "m": "mocha tests/index.js",
+    "kc": "xvfb-run -a karma start --browsers Chromium",
+    "kf": "xvfb-run -a karma start --browsers Firefox",
+    "j": "jshint ."
   },
   "repository": {
     "type": "git",
@@ -27,7 +35,26 @@
     "url": "https://github.com/bitchan/bitmessage-transports/issues"
   },
   "homepage": "https://github.com/bitchan/bitmessage-transports",
+  "devDependencies": {
+    "chai": "*",
+    "jshint": "*",
+    "karma": "^0.12.31",
+    "karma-browserify": "^3.0.3",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-cli": "~0.0.4",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.0",
+    "mocha": "*"
+  },
   "peerDependencies": {
     "bitmessage": ">=0.6.0 <2"
+  },
+  "dependencies": {
+    "buffer-equal": "~0.0.1",
+    "es6-promise": "^2.0.1",
+    "inherits": "^2.0.1",
+    "object-assign": "^2.0.0",
+    "ws": "^0.7.1"
   }
 }
