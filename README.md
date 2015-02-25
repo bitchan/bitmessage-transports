@@ -4,7 +4,8 @@
 
 Network transports for [bitmessage library](https://github.com/bitchan/bitmessage) for both browserify and node. See [here](https://github.com/bitchan/bitmessage#networking) for usage example.
 
-Available transports:
+## Available transports
+
 - [x] TCP (Node.js only)
 - [x] WebSocket
 - [ ] WebRTC
