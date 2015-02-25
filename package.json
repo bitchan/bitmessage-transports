@@ -1,0 +1,33 @@
+{
+  "name": "bitmessage-transports",
+  "version": "0.1.0",
+  "description": "bitmessage transports",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitchan/bitmessage-transports.git"
+  },
+  "keywords": [
+    "bitmessage",
+    "crypto",
+    "library",
+    "messaging",
+    "net",
+    "transports",
+    "tcp",
+    "websocket",
+    "webrtc"
+  ],
+  "author": "Kagami Hiiragi",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/bitchan/bitmessage-transports/issues"
+  },
+  "homepage": "https://github.com/bitchan/bitmessage-transports",
+  "peerDependencies": {
+    "bitmessage": ">=0.6.0 <2"
+  }
+}
