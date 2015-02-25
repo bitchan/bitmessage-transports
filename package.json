@@ -47,10 +47,8 @@
     "karma-mocha-reporter": "^1.0.0",
     "mocha": "*"
   },
-  "peerDependencies": {
-    "bitmessage": ">=0.6.0 <2"
-  },
   "dependencies": {
+    "bitmessage": ">=0.6.0 <2",
     "buffer-equal": "~0.0.1",
     "es6-promise": "^2.0.1",
     "inherits": "^2.0.1",
